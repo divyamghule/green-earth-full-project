@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - GreenEarn</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/dashboard.css" />
+</head>
+<body>
+  <header class="topbar app-topbar">
+    <div class="brand">GreenEarn</div>
+    <nav>
+      <a href="./activity.html">Submit Activity</a>
+      <a href="#" id="logoutBtn">Logout</a>
+    </nav>
+  </header>
+
+  <main class="app-layout">
+    <section class="stats-grid" id="statsGrid">
+      <article class="stat-card"><h3>Total Points</h3><p id="totalPoints">0</p></article>
+      <article class="stat-card"><h3>Level</h3><p id="userLevel">Eco Starter</p></article>
+      <article class="stat-card"><h3>Streak</h3><p id="userStreak">0</p></article>
+      <article class="stat-card"><h3>Verified</h3><p id="verifiedCount">0</p></article>
+    </section>
+
+    <section class="card">
+      <h2>Recent Point Entries</h2>
+      <div id="pointsList" class="list"></div>
+    </section>
+
+    <section class="card">
+      <h2>Activity History</h2>
+      <div id="historyList" class="list"></div>
+    </section>
+  </main>
+
+  <script src="./js/api.js"></script>
+  <script src="./js/utils.js"></script>
+  <script src="./js/dashboard.js"></script>
+</body>
+</html>

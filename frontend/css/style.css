@@ -1,0 +1,165 @@
+:root {
+  --bg: #f4f7f1;
+  --ink: #12261a;
+  --muted: #56715f;
+  --brand: #2d8a4f;
+  --brand-dark: #1f5e36;
+  --accent: #f4b400;
+  --surface: #ffffff;
+  --danger: #be2d2d;
+  --shadow: 0 14px 30px rgba(23, 56, 35, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Outfit", "Segoe UI", Tahoma, sans-serif;
+  background:
+    radial-gradient(circle at 10% 10%, rgba(45, 138, 79, 0.18), transparent 30%),
+    radial-gradient(circle at 90% 20%, rgba(244, 180, 0, 0.18), transparent 30%),
+    var(--bg);
+  color: var(--ink);
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+}
+
+.brand {
+  font-weight: 800;
+  font-size: 1.35rem;
+  color: var(--brand-dark);
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.hero {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 1.2rem 2.5rem;
+}
+
+.hero-card {
+  background: linear-gradient(135deg, #1c5f37, #2d8a4f);
+  color: #fff;
+  border-radius: 22px;
+  padding: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  opacity: 0.9;
+}
+
+h1 {
+  margin: 0.4rem 0;
+  font-size: clamp(1.8rem, 2.8vw, 2.8rem);
+}
+
+.cta-row {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 1.1rem;
+  flex-wrap: wrap;
+}
+
+.feature-grid {
+  margin-top: 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.8rem;
+}
+
+.feature-grid article {
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.btn {
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  padding: 0.65rem 1rem;
+  transition: transform 0.18s ease, opacity 0.18s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.primary {
+  background: var(--brand);
+  color: #fff;
+}
+
+.secondary {
+  background: #eaf3ed;
+  color: var(--brand-dark);
+}
+
+.input,
+input,
+select {
+  width: 100%;
+  border: 1px solid #d1dfd6;
+  border-radius: 10px;
+  padding: 0.65rem 0.75rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+
+.message {
+  margin-top: 0.8rem;
+  font-size: 0.92rem;
+  min-height: 1.2rem;
+}
+
+.message.error {
+  color: var(--danger);
+}
+
+.message.success {
+  color: var(--brand-dark);
+}
+
+@media (max-width: 600px) {
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}

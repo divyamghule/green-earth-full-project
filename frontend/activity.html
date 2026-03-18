@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Submit Activity - GreenEarn</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/dashboard.css" />
+</head>
+<body>
+  <header class="topbar app-topbar">
+    <div class="brand">GreenEarn</div>
+    <nav>
+      <a href="./dashboard.html">Dashboard</a>
+      <a href="#" id="logoutBtn">Logout</a>
+    </nav>
+  </header>
+
+  <main class="app-layout">
+    <section class="card">
+      <h2>1) Select Activity</h2>
+      <select id="activityType" class="input"></select>
+      <p class="small">Use live camera only. Gallery uploads are blocked.</p>
+    </section>
+
+    <section class="card">
+      <h2>2) Live Camera Capture</h2>
+      <video id="liveVideo" autoplay playsinline muted></video>
+      <canvas id="captureCanvas" class="hidden"></canvas>
+      <div class="row">
+        <button id="startCameraBtn" class="btn secondary">Open Camera</button>
+        <button id="captureBeforeBtn" class="btn primary">Capture Before</button>
+        <button id="captureAfterBtn" class="btn primary">Capture After</button>
+      </div>
+      <div class="row preview-pair">
+        <div>
+          <p class="small">Before Image</p>
+          <img id="beforePreview" alt="Before capture" class="preview hidden" />
+          <p id="beforeLocationText" class="small">Before location: not captured.</p>
+        </div>
+        <div>
+          <p class="small">After Image</p>
+          <img id="afterPreview" alt="After capture" class="preview hidden" />
+          <p id="afterLocationText" class="small">After location: not captured.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>3) Submit for AI Verification</h2>
+      <button id="submitBtn" class="btn primary full">Submit Activity</button>
+      <div id="submitMessage" class="message"></div>
+    </section>
+  </main>
+
+  <script src="./js/api.js"></script>
+  <script src="./js/utils.js"></script>
+  <script src="./js/camera.js"></script>
+  <script src="./js/gps.js"></script>
+  <script src="./js/activity.js"></script>
+</body>
+</html>
