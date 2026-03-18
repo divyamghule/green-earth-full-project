@@ -22,14 +22,32 @@
   <main class="app-layout">
     <section class="stats-grid" id="statsGrid">
       <article class="stat-card"><h3>Total Points</h3><p id="totalPoints">0</p></article>
+      <article class="stat-card"><h3>Wallet (Rs)</h3><p id="walletRupees">0</p></article>
       <article class="stat-card"><h3>Level</h3><p id="userLevel">Eco Starter</p></article>
       <article class="stat-card"><h3>Streak</h3><p id="userStreak">0</p></article>
       <article class="stat-card"><h3>Verified</h3><p id="verifiedCount">0</p></article>
+      <article class="stat-card"><h3>Can Withdraw</h3><p id="canWithdraw">No</p></article>
+    </section>
+
+    <section class="card">
+      <h2>Withdraw Earnings</h2>
+      <p id="withdrawRule" class="small">1 point = Rs 1. Minimum 1000 points.</p>
+      <div class="row form-row">
+        <input id="withdrawPoints" class="input" type="number" min="1000" step="1" placeholder="Enter points to withdraw" />
+        <input id="withdrawUpiId" class="input" type="text" placeholder="Enter UPI ID (example@upi)" />
+      </div>
+      <button id="withdrawBtn" class="btn primary">Request Withdrawal</button>
+      <div id="withdrawMessage" class="message"></div>
     </section>
 
     <section class="card">
       <h2>Recent Point Entries</h2>
       <div id="pointsList" class="list"></div>
+    </section>
+
+    <section class="card">
+      <h2>Withdrawal History</h2>
+      <div id="withdrawalList" class="list"></div>
     </section>
 
     <section class="card">

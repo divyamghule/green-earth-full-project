@@ -6,6 +6,7 @@ const fs = require("fs");
 const authRoutes = require("./routes/auth.routes");
 const activityRoutes = require("./routes/activity.routes");
 const dashboardRoutes = require("./routes/dashboard.routes");
+const withdrawalRoutes = require("./routes/withdrawal.routes");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -32,6 +33,7 @@ app.get("/api/health", (_req, res) => {
 app.use("/api/auth", authRoutes);
 app.use("/api/activities", activityRoutes);
 app.use("/api/dashboard", dashboardRoutes);
+app.use("/api/withdrawals", withdrawalRoutes);
 
 const frontendDir = path.join(__dirname, "..", "frontend");
 if (fs.existsSync(frontendDir)) {

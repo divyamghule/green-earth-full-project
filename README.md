@@ -2,6 +2,13 @@
 
 GreenEarn rewards users for verified real-world environmental activities.
 
+## Latest Update (March 2026)
+
+- Added wallet and withdrawal module
+- Conversion rule: `1 point = Rs 1`
+- Minimum withdrawal threshold: `1000 points`
+- Added withdrawal APIs and dashboard UI for request/history tracking
+
 ## What This Project Includes
 
 - Secure login/register with JWT
@@ -10,6 +17,7 @@ GreenEarn rewards users for verified real-world environmental activities.
 - GPS location capture and anti-fraud checks
 - TensorFlow.js-based before/after AI verification (`Garbage` / `Clean` / `Plant`)
 - Reward points and streak system
+- Withdrawal system (`1 point = Rs 1`, minimum `1000` points)
 - Dashboard with submission history
 - JSON-based database for hackathon speed
 
@@ -32,6 +40,7 @@ green earth app/
     middleware/
     services/
     db/
+      withdrawals.json
     models/tfjs/
     uploads/
 ```
@@ -57,6 +66,8 @@ Create a `.env` file in `backend/` (or copy `.env.example`) and set:
 - `AI_CLEANUP_HIGH_CHANGE_OVERRIDE=0.15`
 - `AI_CLEANUP_MIN_BRIGHTNESS_GAIN=0.02`
 - `AI_CLEANUP_MIN_VARIANCE_DROP=0.002`
+- `POINT_TO_RUPEE_RATE=1`
+- `MIN_WITHDRAW_POINTS=1000`
 
 ## Quick Start
 
@@ -94,7 +105,8 @@ http://localhost:5000
 5. Perform the activity and capture `After` image
 6. GPS auto-captures on both `Before` and `After` capture clicks
 7. Submit activity for AI before/after verification
-8. Check dashboard for points/history
+8. Open dashboard and request withdrawal when points >= 1000
+9. Track withdrawal history/status
 
 ## API Endpoints
 
@@ -106,6 +118,9 @@ http://localhost:5000
 - `POST /api/activities/submit`
 - `GET /api/activities/history`
 - `GET /api/dashboard/summary`
+- `GET /api/withdrawals/wallet`
+- `GET /api/withdrawals/history`
+- `POST /api/withdrawals/request`
 
 `POST /api/activities/submit` payload includes:
 - `beforeImageData`, `afterImageData`

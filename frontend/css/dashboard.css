@@ -34,6 +34,10 @@ h2 {
   margin-top: 0.75rem;
 }
 
+.form-row .input {
+  flex: 1 1 240px;
+}
+
 .preview-pair {
   align-items: flex-start;
 }
@@ -112,6 +116,16 @@ video,
 .badge.rejected {
   background: #fde3e3;
   color: #862121;
+}
+
+.badge.pending {
+  background: #fff0d6;
+  color: #855700;
+}
+
+.badge.paid {
+  background: #dcf4e4;
+  color: #175d33;
 }
 
 @media (max-width: 640px) {
