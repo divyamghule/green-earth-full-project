@@ -108,6 +108,14 @@ http://localhost:5000
 8. Open dashboard and request withdrawal when points >= 1000
 9. Track withdrawal history/status
 
+<img width="1334" height="581" alt="Screenshot 2026-06-29 210735" src="https://github.com/user-attachments/assets/09e2c2b3-2774-4cea-a1d3-86a738b8391c" />
+<img width="966" height="589" alt="Screenshot 2026-06-29 210813" src="https://github.com/user-attachments/assets/5bc88206-6173-4aea-8f2f-694f22ee2837" />
+<img width="1325" height="643" alt="Screenshot 2026-06-29 211017" src="https://github.com/user-attachments/assets/b2fba99d-2186-4930-bb7f-b747c5607eb9" />
+<img width="599" height="488" alt="Screenshot 2026-06-29 211046" src="https://github.com/user-attachments/assets/ec75fc4f-43a7-4e0e-b0be-fcd2a97a79a1" />
+<img width="1315" height="314" alt="Screenshot 2026-06-29 211118" src="https://github.com/user-attachments/assets/5b072b00-7064-4276-8cd2-deda4274603e" />
+<img width="1315" height="314" alt="Screenshot 2026-06-29 211118" src="https://github.com/user-attachments/assets/1c0ac872-bf0d-425d-9d26-aa5d99aae6c0" />
+
+
 ## API Endpoints
 
 - `POST /api/auth/register`
