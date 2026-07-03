@@ -113,7 +113,8 @@ http://localhost:5000
 <img width="1325" height="643" alt="Screenshot 2026-06-29 211017" src="https://github.com/user-attachments/assets/b2fba99d-2186-4930-bb7f-b747c5607eb9" />
 <img width="599" height="488" alt="Screenshot 2026-06-29 211046" src="https://github.com/user-attachments/assets/ec75fc4f-43a7-4e0e-b0be-fcd2a97a79a1" />
 <img width="1315" height="314" alt="Screenshot 2026-06-29 211118" src="https://github.com/user-attachments/assets/5b072b00-7064-4276-8cd2-deda4274603e" />
-<img width="1315" height="314" alt="Screenshot 2026-06-29 211118" src="https://github.com/user-attachments/assets/1c0ac872-bf0d-425d-9d26-aa5d99aae6c0" />
+<img width="859" height="408" alt="Screenshot 2026-06-29 211128" src="https://github.com/user-attachments/assets/20fadfb1-6161-4709-b13f-be56982bea22" />
+
 
 
 ## API Endpoints
